@@ -1,3 +1,4 @@
+import { CardContent, CardMedia } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -10,6 +11,24 @@ const useStyles = makeStyles((theme) => ({
   },
   butttons: {
     marginTop: "40px",
+  },
+  cardGrid: {
+    padding: "20px 0",
+  },
+  card: {
+    flexDirection: "column",
+    height: "100%",
+    display: "flex,",
+  },
+  cardMedia: {
+    paddingTop: "56.25%", // 16:9
+  },
+  cardContent: {
+    flexGrow: 1,
+  },
+  footer: {
+    backgroundColor: theme.palette.background.paper,
+    padding: "50px 0",
   },
 }));
 

@@ -15,6 +15,7 @@ import {
 import CameraAltIcon from "@material-ui/icons/CameraAlt";
 import "./App.css";
 import useStyles from "./styles";
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const App = () => {
   const classes = useStyles();
@@ -66,35 +67,45 @@ const App = () => {
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
           <Grid container spacing={4}>
-            <Grid item>
-              <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image="http://source.unsplash.com/random"
-                  title="Image title"
-                />
-                <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom variant="h5">
-                    Heading
-                  </Typography>
-                  <Typography>
-                    This is a medis card.Yo can use this section to describe the
-                    content.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    View
-                  </Button>
-                  <Button size="small" color="primary">
-                    Edit
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
+            {cards.map(() => (
+              <Grid item>
+                <Card className={classes.card}>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image="http://source.unsplash.com/random"
+                    title="Image title"
+                  />
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5">
+                      Heading
+                    </Typography>
+                    <Typography>
+                      This is a medis card.Yo can use this section to describe
+                      the content.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      View
+                    </Button>
+                    <Button size="small" color="primary">
+                      Edit
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
         </Container>
       </main>
+      <footer className={classes.footer}>
+        <Typography variant="h6" align="center" gutterBottom>
+          Footer
+        </Typography>
+        <Typography variant="subtitle1" align="center" color="textPrimary">
+          Something here to give the footer a purpose!
+        </Typography>
+      </footer>
     </div>
   );
 };
