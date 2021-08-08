@@ -15,7 +15,7 @@ import {
 import CameraAltIcon from "@material-ui/icons/CameraAlt";
 import "./App.css";
 import useStyles from "./styles";
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 
 const App = () => {
   const classes = useStyles();
@@ -46,7 +46,7 @@ const App = () => {
               paragraph
             >
               Hello everyone! This is a photo album and I'm trying to make this
-              sentence as long as possible so we can see how does it look like
+              sentence as long as possible so we can see how  it looks
               on the screen
             </Typography>
             <div className={classes.button}>
@@ -67,7 +67,7 @@ const App = () => {
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
           <Grid container spacing={4}>
-            {cards.map(() => (
+            {new Array(10).fill().map(() => (
               <Grid item>
                 <Card className={classes.card}>
                   <CardMedia
